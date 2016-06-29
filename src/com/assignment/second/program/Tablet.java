@@ -1,4 +1,4 @@
-package com.secondassignment.programs;
+package com.assignment.second.program;
 
 
 public class Tablet extends Medicine {
