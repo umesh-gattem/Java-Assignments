@@ -8,14 +8,15 @@ import java.io.InputStreamReader;
 
 /**
  * 
+ * A program which take source file and destination file as input as command
+ * line arguments.It copies the source file contents to destination file. If
+ * source file does not exist, it should give appropriate message to use. If
+ * destination file does not exist, it should be created. If it exists,program
+ * should ask that, “whether you want to overwrite?(Yes/No”.
+ * 
  * @author umesh
  * 
- *         A program which take source file and destination file as input as
- *         command line arguments.It copies the source file contents to
- *         destination file. If source file does not exist, it should give
- *         appropriate message to use. If destination file does not exist, it
- *         should be created. If it exists,program should ask that, “whether you
- *         want to overwrite?(Yes/No”.
+ * @since 29-06-2016
  *
  */
 
@@ -69,6 +70,8 @@ public class FileCopyIfFileEXists {
 		while ((c = inputFile.read()) != -1) {
 			outputFile.write(c);
 		}
+		inputFile.close();
+		outputFile.close();
 		System.out.println("File copied successfully");
 	}
 

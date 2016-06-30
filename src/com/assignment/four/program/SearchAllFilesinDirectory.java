@@ -52,6 +52,7 @@ public class SearchAllFilesinDirectory {
 		} else {
 			System.out.println("Enter directory didn't present .");
 		}
+		scan.close();
 
 	}
 

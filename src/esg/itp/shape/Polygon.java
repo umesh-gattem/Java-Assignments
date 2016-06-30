@@ -2,11 +2,16 @@ package esg.itp.shape;
 
 /**
  * 
+ * An interface Polygon containing the members : area float, perimeter float
+ * Member functions: void calcArea( ); void calcPeri( ); void display( ); of the
+ * given polygon
+ * 
  * @author umesh
  * 
- *         An interface Polygon containing the members : area float, perimeter
- *         float Member functions: void calcArea( ); void calcPeri( ); void
- *         display( ); of the given polygon
+ * @since 30-06-2016
+ * 
+ * 
+ * 
  *
  */
 

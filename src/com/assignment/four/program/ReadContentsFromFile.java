@@ -57,6 +57,7 @@ public class ReadContentsFromFile {
 		bufferWriter = new BufferedWriter(new FileWriter(string));
 		bufferWriter.write(input);
 		bufferWriter.close();
+		scan.close();
 
 	}
 
