@@ -9,7 +9,7 @@ package com.assignment.multithread.com;
  *
  */
 
-public class ThreadofGCD extends Thread {
+public class GCDThread extends Thread {
 	Thread gcdofTwoNumberThread;
 
 	public void start() {

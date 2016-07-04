@@ -2,7 +2,7 @@ package esg.itp.shape;
 
 /**
  * 
- * An interface Polygon containing the members : area float, perimeter float
+ * An interface Polygon containing the members :area float, perimeter float
  * Member functions: void calcArea( ); void calcPeri( ); void display( ); of the
  * given polygon
  * 
@@ -10,9 +10,6 @@ package esg.itp.shape;
  * 
  * @since 30-06-2016
  * 
- * 
- * 
- *
  */
 
 public interface Polygon {

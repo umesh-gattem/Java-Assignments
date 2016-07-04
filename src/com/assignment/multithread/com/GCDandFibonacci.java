@@ -15,7 +15,7 @@ public class GCDandFibonacci {
 	public static void main(String[] args) {
 
 		FibonacciThread fibonacci = new FibonacciThread();
-		ThreadofGCD gcdofTwoNumber = new ThreadofGCD();
+		GCDThread gcdofTwoNumber = new GCDThread();
 		fibonacci.start();
 		gcdofTwoNumber.start();
 		try {
