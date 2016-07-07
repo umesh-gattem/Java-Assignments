@@ -19,9 +19,6 @@ public class MainFunction {
 		new ThreadMessage("Beautiful", display);
 		new ThreadMessage("World", display);
 
-		
-	
-
 	}
 
 }

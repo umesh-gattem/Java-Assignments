@@ -18,7 +18,6 @@ public class FactorialThread implements Runnable {
 		factorialThread.start();
 	}
 
-	
 	public void run() {
 		while (isRunning == true) {
 			if (ThreadWhichReadsFile.arrayofInteger.size() == 0)
@@ -29,8 +28,6 @@ public class FactorialThread implements Runnable {
 				fact = fact * i;
 			}
 			System.out.println("Factorial of " + k + " is " + fact);
-			System.out.println("running");
-
 		}
 	}
 }

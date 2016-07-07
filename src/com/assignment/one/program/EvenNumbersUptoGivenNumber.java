@@ -23,6 +23,7 @@ public class EvenNumbersUptoGivenNumber {
 				System.out.print(i + "   ");
 			}
 		}
+		scan.close();
 		return;
 	}
 }
