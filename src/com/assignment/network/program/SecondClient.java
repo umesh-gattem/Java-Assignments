@@ -11,15 +11,15 @@ import java.net.Socket;
 import java.net.UnknownHostException;
 
 /**
- * This is the Client class where client socket is used to connect with the
- * server and this client and server are communicated with the messages
+ * This is the Second Client class where client socket is used to connect with
+ * the server and all clients and server are communicated with the messages
  * 
  * @author umesh
  * 
  * @since 08-07-2016
  *
  */
-public class ClientSocket {
+public class SecondClient {
 
 	public static void main(String[] args) {
 
