@@ -20,7 +20,8 @@ import org.apache.log4j.Logger;
 public class PriorityQueue {
 	int maxSize;
 	private static Logger LOGGER = Logger.getLogger(PriorityQueue.class);
-	ArrayList<TaskDetail> taskList = new ArrayList<TaskDetail>();
+	public static ArrayList<TaskDetail> taskList = new ArrayList<TaskDetail>();
+	SortingTechnique sortTheList= new SortingTechnique();
 
 	public PriorityQueue(int maxSize) {
 		this.maxSize = maxSize;
@@ -43,9 +44,11 @@ public class PriorityQueue {
 		TaskDetail newTask = new TaskDetail(taskName, priority);
 		taskList.add(newTask);
 		LOGGER.info(taskName + "  with priority  " + priority + "  is inserted");
-		Collections.sort(taskList);
-	}
+		//Collections.sort(taskList);
 
+		sortTheList.sort(taskList,newTask);
+	}
+	
 	/**
 	 * This is the method to check whether the Queue is empty or not.
 	 * 

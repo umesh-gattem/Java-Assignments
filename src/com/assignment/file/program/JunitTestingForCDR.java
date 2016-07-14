@@ -1,4 +1,4 @@
-package com.assignment.four.program;
+package com.assignment.file.program;
 
 /**
  * A JunitTesting class which contains the method to calculate the charge of the

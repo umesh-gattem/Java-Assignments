@@ -1,4 +1,4 @@
-package com.assignment.four.program;
+package com.assignment.file.program;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
