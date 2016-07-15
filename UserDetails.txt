@@ -1,0 +1,7 @@
+umeh		k
+get		u
+aneesh		mohan
+umesh		kumar
+2		aneesh
+		aneesh
+xyz		yzx

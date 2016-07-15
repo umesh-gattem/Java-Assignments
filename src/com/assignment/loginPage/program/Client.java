@@ -25,12 +25,13 @@ import org.apache.log4j.Logger;
 public class Client {
 
 	private static Logger LOGGER = Logger.getLogger(Client.class);
+
 	static Socket clientSocket = null;
 	static PrintWriter writeToServer = null;
 	static BufferedReader readFromServer = null;
-	static Scanner scan = new Scanner(System.in);
 
 	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
 		try {
 			InetAddress inetAddress = InetAddress.getLocalHost();
 			clientSocket = new Socket(inetAddress, 2026);
@@ -62,6 +63,8 @@ public class Client {
 			LOGGER.info("Host not found");
 		} catch (IOException e) {
 			LOGGER.info("IOException");
+		} finally {
+			scan.close();
 		}
 	}
 }

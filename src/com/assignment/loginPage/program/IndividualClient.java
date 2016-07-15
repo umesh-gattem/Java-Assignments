@@ -23,7 +23,7 @@ import org.apache.log4j.Logger;
  *
  */
 
-public class IndividualClient extends Thread {
+public class IndividualClient extends Thread{
 
 	private static Logger LOGGER = Logger.getLogger(Server.class);
 	static ServerSocket serverSocket = null;
@@ -31,13 +31,13 @@ public class IndividualClient extends Thread {
 	public Socket socket;
 
 	/**
-	 * Invoke the constructor to initialise the new socket
+	 * Invoke the constructor to initialize the new socket
 	 * 
 	 * @param clientSocket
 	 */
 
-	public IndividualClient(Socket clientSocket) {
-		this.socket = clientSocket;
+	public IndividualClient(Socket socket) {
+		this.socket = socket;
 	}
 
 	/**
@@ -46,14 +46,10 @@ public class IndividualClient extends Thread {
 	 */
 
 	public void run() {
-		try {
-			readFromClient = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-		} catch (IOException e) {
-			LOGGER.info("IOException");
-		}
 		while (true) {
 			String readClient;
 			try {
+				readFromClient = new BufferedReader(new InputStreamReader(socket.getInputStream()));
 				if ((readClient = readFromClient.readLine()) != null) {
 					if (readClient.charAt(0) == '2') {
 						readClient = readClient.substring(1);
@@ -66,7 +62,6 @@ public class IndividualClient extends Thread {
 				LOGGER.info("IOException");
 			}
 		}
-
 	}
 
 	/**
@@ -85,11 +80,7 @@ public class IndividualClient extends Thread {
 			BufferedReader bufferedReader = new BufferedReader(new FileReader(file));
 			while ((contentsofFile = bufferedReader.readLine()) != null) {
 				if (contentsofFile.equals(user)) {
-					LOGGER.info("User is already registered");
-					bufferedReader.close();
-					BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-					LOGGER.info("If you still wants to continue: Enter yes otherwise Enter no");
-					String message = reader.readLine();
+					String message = "User is already registered";
 					serviceInfo(socket, message);
 
 				}
@@ -98,12 +89,8 @@ public class IndividualClient extends Thread {
 			BufferedWriter bufferwriter;
 			bufferwriter = new BufferedWriter(new FileWriter(file, true));
 			bufferwriter.write(user + "\n");
-			LOGGER.info("New user is registered");
-			LOGGER.info("New User Details are stored in Text File");
 			bufferwriter.close();
-			BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-			LOGGER.info("If you still wants to continue: Enter yes otherwise Enter no");
-			String message = reader.readLine();
+			String message = "New user is registered";
 			serviceInfo(socket, message);
 		} catch (FileNotFoundException e) {
 			LOGGER.info("File not Found");

@@ -6,8 +6,8 @@ import java.net.Socket;
 import org.apache.log4j.Logger;
 
 /**
- * A class Server creates a individual clients where it checks whether the user needs to login or
- * register.
+ * A class Server creates a individual clients where it checks whether the user
+ * needs to login or register.
  * 
  * @author umesh
  * 
