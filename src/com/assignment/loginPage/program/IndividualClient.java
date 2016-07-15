@@ -82,7 +82,6 @@ public class IndividualClient extends Thread{
 				if (contentsofFile.equals(user)) {
 					String message = "User is already registered";
 					serviceInfo(socket, message);
-
 				}
 			}
 			bufferedReader.close();
@@ -129,12 +128,10 @@ public class IndividualClient extends Thread{
 				String message = "Logged in Successfully";
 				serviceInfo(socket, message);
 			}
-
 			bufferedReader.close();
 		} catch (IOException e) {
 
 		}
-
 	}
 
 	/**
@@ -155,7 +152,5 @@ public class IndividualClient extends Thread{
 		} catch (IOException e) {
 			LOGGER.info("IOException");
 		}
-
 	}
-
 }
